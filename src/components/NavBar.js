@@ -1,20 +1,24 @@
 import React from 'react'
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import './Components.css';
 import Home from '../pages/Home'
 import Service from '../pages/Service'
 import Contact from '../pages/Contact'
 import AboutUs from '../pages/AboutUs'
 
-export default function Navigation() {
+export default function NavBar() {
   return (
     <div>
         <Router>
-            <div>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
+            <div className="navbar">
+                <div className="navbar-logo">
+                    <img src="/logo.jpg" alt="Logo" />
+                </div>
+                <ul className="nav-links">
+                    <li><Link to="/">Inicio</Link></li>
                     <li><Link to="/service">Servicios</Link></li>
                     <li><Link to="/contact">Contactos</Link></li>
-                    <li><Link to="/about-us">About Us</Link></li>
+                    <li><Link to="/about-us">Sobre Nosotros</Link></li>
                 </ul>
             </div>
             <Routes>
